@@ -16,6 +16,7 @@ namespace Algo
             Sort(array, low, high);
             Console.WriteLine(String.Join(",", array));
             array = new int[] { 12, 34, 44, 10, 40, 75, 54, 23, 65, 45, 67 };
+            //{ 12, 34, 44, 10, 40, 75, 54, 23, 65, 45, 67 };
             quickSort(array, low, high);
             Console.WriteLine(String.Join(",", array));
         }

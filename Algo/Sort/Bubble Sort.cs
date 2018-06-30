@@ -17,7 +17,6 @@ namespace Algo
         {
             int[] array = { 12, 34, 44, 10, 40, 75, 54, 23, 65, 45, 67 };
             int len = array.Length;
-            int counter = 0;
             for (int i = 0; i < len-1; i++)
             {
                 bool swap = false;

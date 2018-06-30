@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algo
 {
-    class Bucket_Sort
+    class CustomHashSet
     {
     }
 }

@@ -41,26 +41,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Binary Search.cs" />
-    <Compile Include="Bubble Sort.cs" />
-    <Compile Include="Bucket Sort.cs" />
-    <Compile Include="Counting Sort.cs" />
-    <Compile Include="Exponential Search.cs" />
-    <Compile Include="Heap Sort.cs" />
-    <Compile Include="Insertion Sort.cs" />
-    <Compile Include="Interpolation Search.cs" />
-    <Compile Include="Jump Search.cs" />
-    <Compile Include="Linear Search.cs" />
-    <Compile Include="Merge Sort.cs" />
+    <Compile Include="Arrays\ArrayRotation.cs" />
+    <Compile Include="Arrays\CustomDictionary.cs" />
+    <Compile Include="Arrays\CustomHashSet.cs" />
+    <Compile Include="Arrays\FindMinElementInSortedRotatedArray.cs" />
+    <Compile Include="Arrays\MedianInExpandingArray.cs" />
+    <Compile Include="Arrays\MergeTwoSortedLists.cs" />
+    <Compile Include="Arrays\StringBuffer.cs" />
+    <Compile Include="LinkedList\CLL.cs" />
+    <Compile Include="LinkedList\CopyLLWithRandomNode.cs" />
+    <Compile Include="LinkedList\DLL.cs" />
+    <Compile Include="LinkedList\RearrangeLL.cs" />
+    <Compile Include="LinkedList\RemoveOneLLItemsFromAnotherLL.cs" />
+    <Compile Include="LinkedList\ReverseLL.cs" />
+    <Compile Include="LinkedList\SLL.cs" />
+    <Compile Include="LinkedList\SortLL.cs" />
+    <Compile Include="Misc\Compress.cs" />
+    <Compile Include="Misc\FindPermutation.cs" />
+    <Compile Include="Misc\MatrixRotation.cs" />
+    <Compile Include="Misc\Permutation.cs" />
+    <Compile Include="Misc\RandomWrapper.cs" />
+    <Compile Include="Misc\ReverseString.cs" />
+    <Compile Include="Misc\SetZeros.cs" />
+    <Compile Include="Misc\Substring.cs" />
+    <Compile Include="Misc\UniqueChars.cs" />
+    <Compile Include="Queue\QUsingArrays.cs" />
+    <Compile Include="Queue\QUsingLL.cs" />
+    <Compile Include="Queue\QUsingStack.cs" />
+    <Compile Include="Search\BreadthFirstTraversal.cs" />
+    <Compile Include="Search\Binary Search.cs" />
+    <Compile Include="Sort\Bubble Sort.cs" />
+    <Compile Include="Sort\Bucket Sort.cs" />
+    <Compile Include="Sort\Comb Sort.cs" />
+    <Compile Include="Sort\Counting Sort.cs" />
+    <Compile Include="Search\Exponential Search.cs" />
+    <Compile Include="Sort\Cycle Sort.cs" />
+    <Compile Include="Sort\Heap Sort.cs" />
+    <Compile Include="Sort\Insertion Sort.cs" />
+    <Compile Include="Search\Interpolation Search.cs" />
+    <Compile Include="Search\Jump Search.cs" />
+    <Compile Include="Search\Linear Search.cs" />
+    <Compile Include="Sort\Merge Sort.cs" />
+    <Compile Include="Sort\Pigeonhole Sort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quick Sort.cs" />
-    <Compile Include="Radix Sort.cs" />
-    <Compile Include="Selection Sort.cs" />
-    <Compile Include="Ternary Search.cs" />
+    <Compile Include="Sort\Quick Sort.cs" />
+    <Compile Include="Sort\Radix Sort.cs" />
+    <Compile Include="Sort\Selection Sort.cs" />
+    <Compile Include="Sort\Shell Sort.cs" />
+    <Compile Include="Search\Ternary Search.cs" />
+    <Compile Include="Stack\Postfix.cs" />
+    <Compile Include="Stack\Prefix.cs" />
+    <Compile Include="Stack\StackUsingArray.cs" />
+    <Compile Include="Stack\StackUsingLL.cs" />
+    <Compile Include="Tree\BinarySearchTree.cs" />
+    <Compile Include="Tree\BST.cs" />
+    <Compile Include="Tree\MedianOfBST.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Heap\" />
+    <Folder Include="ToDo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
