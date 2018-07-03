@@ -51,6 +51,7 @@
     <Compile Include="LinkedList\CLL.cs" />
     <Compile Include="LinkedList\CopyLLWithRandomNode.cs" />
     <Compile Include="LinkedList\DLL.cs" />
+    <Compile Include="LinkedList\MergeTwoSortedLL.cs" />
     <Compile Include="LinkedList\RearrangeLL.cs" />
     <Compile Include="LinkedList\RemoveOneLLItemsFromAnotherLL.cs" />
     <Compile Include="LinkedList\ReverseLL.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Misc\MatrixRotation.cs" />
     <Compile Include="Misc\Permutation.cs" />
     <Compile Include="Misc\RandomWrapper.cs" />
+    <Compile Include="Misc\ReplaceSpace.cs" />
     <Compile Include="Misc\ReverseString.cs" />
     <Compile Include="Misc\SetZeros.cs" />
     <Compile Include="Misc\Substring.cs" />

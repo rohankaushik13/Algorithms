@@ -101,9 +101,11 @@ namespace Algo
             //BST bst = new BST();
             //bst.Run();
 
-            // MedianOfBST median = new MedianOfBST();
+            MedianOfBST median = new MedianOfBST();
 
-            CopyLLWithRandomNode cll = new CopyLLWithRandomNode();
+            //CopyLLWithRandomNode cll = new CopyLLWithRandomNode();
+
+            //MergeTwoSortedLL merge = new MergeTwoSortedLL();
 
             Console.WriteLine("End");
             Console.ReadLine();

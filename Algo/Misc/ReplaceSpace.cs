@@ -14,7 +14,7 @@ namespace Crack{
         }
         public void Replace(string str, int len){
             StringBuilder strnew = new StringBuilder(len);
-            string[] strarray = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string[] strarray = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             strnew.Append(String.Join("%20",strarray));
             Console.WriteLine(strnew);
         }
@@ -36,7 +36,7 @@ namespace Crack{
 
         public void UpdateSameArray(char[] arr, int len)
         {
-            int spacecount = ((new string(arr)).Split(' ', StringSplitOptions.RemoveEmptyEntries)).Length-1;
+            int spacecount = ((new string(arr)).Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)).Length-1;
             int arraylen = len -1 + (spacecount *2);
             for(int i = len -1; i>=0; i--){
                 if(arr[i] == ' '){

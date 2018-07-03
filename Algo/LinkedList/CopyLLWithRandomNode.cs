@@ -11,6 +11,7 @@ namespace Algo
         public NodewithRanodm<T> next;
         public NodewithRanodm<T> random;
         public T data;
+        public NodewithRanodm<int> arbitrary;
 
         public NodewithRanodm()
         {
@@ -98,6 +99,8 @@ namespace Algo
 
     public class CopyLLWithRandomNode
     {
+        public Dictionary<NodewithRanodm<int>, NodewithRanodm<int>> nodeToNodeMapping = new Dictionary<NodewithRanodm<int>, NodewithRanodm<int>>();
+
         public CopyLLWithRandomNode()
         {
             SLLwithRandom<int> sll1 = new SLLwithRandom<int>();
@@ -107,8 +110,92 @@ namespace Algo
             SLLwithRandom<int> sll2 = CopyLL(sll1);
             sll2.Traverse(sll2.head);
 
+            Console.WriteLine("First Approach");
             NodewithRanodm<int> sll2Head= SetRandom(sll1, sll2);
             sll2.Traverse(sll2Head);
+
+            Console.WriteLine("Second Approach");
+            // Second Approach
+            sll2Head = null;
+            sll2Head = SetRandomUsingDictionary(sll1, sll2);
+            sll2.Traverse(sll2Head);
+
+            Console.WriteLine("Third Approach");
+            //Third Approach
+            sll2Head = null;
+            sll2Head = SetRandomUsingArbitraryNode(sll1, sll2);
+            sll2.Traverse(sll2Head);
+
+            Console.WriteLine("Fourth Approach");
+            //Fourth Approach
+            sll2 = CopyLL2(sll1);
+            sll2.Traverse(sll2.head);
+        }
+
+        private SLLwithRandom<int> CopyLL2(SLLwithRandom<int> sll1)
+        {
+            SLLwithRandom<int> sll2 = new SLLwithRandom<int>();
+            NodewithRanodm<int> iterator = sll1.head.next;
+            while (iterator != null)
+            {
+                NodewithRanodm<int> node = new NodewithRanodm<int>();
+                node.data = iterator.data;
+                NodewithRanodm<int> temp = iterator.next;
+                iterator.next = node;
+                node.next = temp;
+
+                iterator = iterator.next.next;
+            }
+            iterator = sll1.head.next;
+            while (iterator != null)
+            {
+                iterator.next.random = iterator.random.next;
+
+                iterator = iterator.next.next;
+            }
+            iterator = sll1.head.next;
+            NodewithRanodm<int> iterator2 = sll2.head;
+            while (iterator != null)
+            {
+                iterator2.next = iterator.next;
+                iterator2 = iterator2.next;
+                iterator.next = iterator.next.next;
+                iterator = iterator.next;
+            }
+
+            return sll2;
+        }
+
+        public NodewithRanodm<int> SetRandomUsingArbitraryNode(SLLwithRandom<int> sll1, SLLwithRandom<int> sll2)
+        {
+            NodewithRanodm<int> nodeSLL1 = sll1.head.next;
+            NodewithRanodm<int> nodeSLL2 = sll2.head.next;
+            while (nodeSLL1 != null)
+            {
+                if (nodeSLL1.random != null)
+                {
+                    nodeSLL2.random = nodeSLL1.random.arbitrary;
+                }
+                nodeSLL1 = nodeSLL1.next;
+                nodeSLL2 = nodeSLL2.next;
+            }
+            return sll2.head;
+        }
+
+        public NodewithRanodm<int> SetRandomUsingDictionary(SLLwithRandom<int> sll1, SLLwithRandom<int> sll2)
+        {
+            NodewithRanodm<int> nodeSLL1 = sll1.head.next;
+            NodewithRanodm<int> nodeSLL2 = sll2.head.next;
+            while (nodeSLL1 != null)
+            {
+                if (nodeSLL1.random != null)
+                {
+                    nodeToNodeMapping.TryGetValue(nodeSLL1.random, out nodeSLL2.random);
+                }
+                nodeSLL1 = nodeSLL1.next;
+                nodeSLL2 = nodeSLL2.next;
+            }
+            return sll2.head;
         }
 
         public NodewithRanodm<int> SetRandom(SLLwithRandom<int> sll1, SLLwithRandom<int> sll2)
@@ -155,6 +242,12 @@ namespace Algo
                 node.data = iterator.data;
                 sll2.current.next = node;
                 sll2.current = node;
+
+                //Second approach
+                nodeToNodeMapping.Add(iterator, node);
+
+                //third approach
+                iterator.arbitrary = node;
 
                 iterator = iterator.next;
             }
