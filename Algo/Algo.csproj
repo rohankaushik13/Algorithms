@@ -59,6 +59,7 @@
     <Compile Include="LinkedList\SortLL.cs" />
     <Compile Include="Misc\Compress.cs" />
     <Compile Include="Misc\FindPermutation.cs" />
+    <Compile Include="Misc\LongestPalindromeInAString.cs" />
     <Compile Include="Misc\MatrixRotation.cs" />
     <Compile Include="Misc\Permutation.cs" />
     <Compile Include="Misc\RandomWrapper.cs" />
